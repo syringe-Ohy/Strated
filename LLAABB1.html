@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website of Ohy</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .top-left-image {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: auto;
+        }
+
+        .image-container {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
+        .think-center {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flexbox;
+            background-color: #f5f5f5;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container2 {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container3 {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .rectangle-box {
+            height: 200px;
+            background-color: #e0e0e0;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .half {
+            flex: 1;
+            background-color: #f9f6f6;
+            border: 1px solid #76f8bd;
+            border-radius: 4px;
+            display: flex;
+            justify-content: normal;
+            align-items: stretch;
+            text-align: justify;
+        }
+
+        .square-box {
+            width: 33%;
+            height: 200px;
+            background-color: #e0e0e0;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* Ensures the image doesn't spill out */
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .ssquare-box {
+            width: 440px;
+            height: auto;
+            background-color: #e0e0e0;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .borrow-form {
+            width: 98%;
+            height: 98%;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #bddcef;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .box2form {
+            width: 48%;
+            height: 80%;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #bddcef;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            overflow-x: auto;
+
+        }
+
+        .box2form label {
+            display: block;
+            margin-bottom: 2px;
+            font-weight: bold;
+        }
+
+        .box2form input,
+        .box2form select {
+            width: 90%;
+            padding: 3px;
+            margin-bottom: 3px;
+            border: 1px solid #bdeab6;
+            border-radius: 2px;
+        }
+
+        .box2form button {
+            padding: 8px 12px;
+            background-color: #007BFF;
+            color: white;
+            border: 3px solid #2ee812;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        .borrow-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .borrow-form input,
+        .borrow-form select {
+            width: 97%;
+            padding: 6px;
+            margin-bottom: 5px;
+            border: 1px solid #bdeab6;
+            border-radius: 4px;
+        }
+
+        .borrow-form button {
+            padding: 8px 12px;
+            background-color: #007BFF;
+            color: white;
+            border: 3px solid #2ee812;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        .submit-book-details {
+            width: 98%;
+            height: 98%;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #bddcef;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+        .submit-book-details label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .submit-book-details input,
+        .submit-book-details select {
+            width: 97%;
+            padding: 6px;
+            margin-bottom: 5px;
+            border: 1px solid #bdeab6;
+            border-radius: 4px;
+        }
+
+        .submit-book-details button {
+            padding: 8px 12px;
+            background-color: #007BFF;
+            color: white;
+            border: 3px solid #2ee812;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .table-box {
+            height: 180px;
+            background-color: #e0e0e0;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+     
+        .table-container {
+            width: 600px;
+            height: 100%;
+            overflow-y: auto;
+        
+            overflow-x: auto;
+           
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        thead th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        tbody td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            word-wrap: break-word;
+      
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <img src="img1.jpg" class="top-left-image">
+
+    <div class="think-center">
+        <h1>Welcome to the Book Borrowing Website</h1>
+        <div class="container">
+
+            <div class="rectangle-box" id="book-data">
+                <h2>Book Data</h2>
+
+
+            </div>
+            <script>
+
+                fetch('showdata.php')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('book-data').innerHTML += data;
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            </script>
+
+            <div class="rectangle-box">
+                <form class="box2form" id="update-form" method="POST" action="update.php">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN to update" required>
+                    <br>
+                    <label for="new-author">New Author:</label>
+                    <input type="text" id="new-author" name="new-author" placeholder="New Author Name">
+                    <br>
+                    <label for="new-title">New Title:</label>
+                    <input type="text" id="new-title" name="new-title" placeholder="New Title">
+                    <label for="new-count">New Count:</label>
+                    <input type="number" id="new-count" name="new-count" placeholder="New count">
+                    <label for="new-category">New Catagory:</label>
+                    <select id="newcategory" name="new-category">
+                        <option value="" disabled selected>Select a Book</option>
+                        <option value="Sci-fi">Sci-fi</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Horror">Horror</option>
+                        <option value="History">History</option>
+                        <option value="Research">Research</option>
+                    </select>
+                    <br>
+                    <button type="submit" name="update">Update Book</button>
+
+                </form>
+
+                <form id="delete-form" class="box2form" method="POST" action="delete.php">
+                    <label for="delete-isbn">ISBN:</label>
+                    <input type="text" id="delete-isbn" name="delete-isbn" placeholder="Enter ISBN to delete" required>
+                    <br>
+                    <button type="submit" name="delete">Delete Book</button>
+
+                </form>
+            </div>
+            <div class="rectangle-box">
+                <div class="half">
+                    <h4>Avilable Tokens :</h4>
+                    <ul id="tokens"></ul>
+                    <script>
+
+                        fetch('token.json?version=' + new Date().getTime())
+                            .then(response => response.json())
+                            .then(data => {
+                                const availableTokens = document.getElementById('tokens');
+                                availableTokens.innerHTML = '<ul>' + data.tokens.map(token => `<li>${token}</li>`).join('') + '</ul>';
+                            })
+                            .catch(error => console.error('Loading Error', error));
+
+                    </script>
+                </div>
+                <div class="half">
+                    <h4>Used Tokens</h4>
+                    <ul id="usedTokens"></ul>
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="square-box">
+                <img src="book1.jpg" class="book-image">
+            </div>
+            <div class="square-box">
+                <img src="book2.jpg" class="book-image">
+            </div>
+            <div class="square-box">
+                <img src="book3.jpg" class="book-image">
+            </div>
+        </div>
+
+        <div class="container3">
+
+            <div class="ssquare-box">
+                <form class="borrow-form" action="process.php" method="POST">
+                    <h2>Borrow Form</h2>
+                    <label for="student-name">Student Name</label>
+                    <input type="text" id="student-name" name="student-name" placeholder="Enter student name" required>
+
+                    <label for="aiub-id">Student AIUB ID</label>
+                    <input type="text" id="aiub-id" name="aiub-id" placeholder="Enter AIUB ID" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter AIUB Email" required>
+
+                    <label for="book-title">Book Title</label>
+                    <select id="book-title" name="book-title" required>
+                        <option value="" disabled selected>Select a Book</option>
+
+                        <option value="Pride and Prejudice">Pride and Prejudice</option>
+                        <option value="To Kill a Mockingbird">To Kill a Mockingbird</option>
+                        <option value="The Great Gatsby">The Great Gatsby</option>
+                        <option value="One Hundred Years of Solitude">One Hundred Years of Solitude</option>
+                        <option value="The Lord of the Rings">The Lord of the Rings</option>
+
+
+                    </select>
+
+
+                    <label for="borrow-date">Books Borrowing Date</label>
+                    <input type="date" id="borrow-date" name="borrow-date" required>
+
+                    <label for="token">Token</label>
+                    <input type="text" id="token" name="token" placeholder="Enter TOKEN(if Avilable)">
+
+                    <label for="return-date">Return Date</label>
+                    <input type="date" id="return-date" name="return-date" required>
+
+                    <label for="fees">Fees</label>
+                    <input type="int" id="fees" name="fees" placeholder="Enter Charged Fees">
+
+                    <label for="paid">Paid</label>
+                    <select id="paid" name="paid" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="ssquare-box">
+                <form class="submit-book-details" action="submit.php" method="POST">
+                    <h2>Book Entry</h2>
+                    <label for="author">Author Name:</label>
+                    <input type="text" id="author" name="author" placeholder="Enter author's name" required>
+
+                    <label for="title">Book Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Enter book title" required>
+
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN" required>
+
+                    <label for="totalCount">Total Count:</label>
+                    <input type="number" id="totalCount" name="totalCount" placeholder="Enter total count" required>
+
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Select a Book</option>
+                        <option value="Sci-fi">Sci-fi</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Horror">Horror</option>
+                        <option value="History">History</option>
+                        <option value="Research">Research</option>
+                    </select>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        
+        async function fetchTokens() {
+            try {
+                const response = await fetch('usedToken.json'); 
+                const data = await response.json();
+                
+                const tokens = Object.values(data).filter(value => value !== 'usedTokens'); 
+
+                if (tokens.length > 0) {
+                    const usedTokensList = document.getElementById('usedTokens');
+                   
+                    tokens.forEach(token => {
+                        const li = document.createElement('li');
+                        li.textContent = token; 
+                        usedTokensList.appendChild(li);
+                    });
+                } else {
+                    document.getElementById('usedTokens').textContent = 'No tokens available';
+                }
+            } catch (error) {
+                console.error('Error fetching the JSON file:', error);
+            }
+        }
+
+        fetchTokens();
+    </script>
+   
+   
+
+
+
+
+
+</body>
+
+</html>

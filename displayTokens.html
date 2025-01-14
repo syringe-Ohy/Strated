@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Tokens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        #tokensContainer {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .token-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .token-item:last-child {
+            border-bottom: none;
+        }
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Used Tokens</h1>
+    <div id="tokensContainer">Loading tokens...</div>
+    <script>
+        async function fetchTokens() {
+            const tokensContainer = document.getElementById('tokensContainer');
+
+            try {
+                // Fetch data from the JSON file or server
+                const response = await fetch('usedToken.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Clear the container and display data
+                tokensContainer.innerHTML = '';
+                for (const [key, value] of Object.entries(data)) {
+                    tokensContainer.innerHTML += `
+                        <div class="token-item">
+                            <strong>${key}:</strong> ${value}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                // Handle errors gracefully
+                tokensContainer.innerHTML = `<div class="error">Error fetching tokens: ${error.message}</div>`;
+            }
+        }
+
+        // Fetch and display tokens on page load
+        fetchTokens();
+    </script>
+</body>
+</html>
